@@ -5,7 +5,7 @@ import hypothesis.strategies as s
 
 from dataclasses import dataclass
 from hypothesis import given
-from string import ascii_lowercase
+from string import ascii_letters
 
 @dataclass
 class Node:
@@ -52,33 +52,9 @@ def answer(input_list, target):
             break
 
     # return sorted by node name
-
-    # it is possible that we may have undercut the output
-    # as in the case of all equal values in the input_list
-    # run a final check, distributing the leftover
-    temp_ans = final_check(ans, target)
-
-    final_ans = sorted(temp_ans, key=lambda x: x.name)
+    final_ans = sorted(ans, key=lambda x: x.name)
 
     return final_ans
-
-def final_check(temp_ans, target):
-    temp_sum0 = sum([node.value for node in temp_ans])
-    leftover = target - temp_sum0
-
-    # in place shuffle the list
-    random.shuffle(temp_ans)
-    index = 0
-    while leftover != 0:
-        node = temp_ans[index]
-        temp_ans[index] = Node(node.name, node.value + 1)
-        index += 1
-        leftover -= 1
-        # redo, if we reach the end
-        if index == len(temp_ans):
-            index = 0
-
-    return temp_ans
 
 def test_1():
     input_list = [Node("a", 20), Node("b", 110), Node("c", 110), Node("d", 110), Node("e", 30)]
@@ -94,7 +70,7 @@ def test_2():
 
 # s.text() -> generate some random name (doesn't actually matter), non-empty
 # s.integers() -> generate integers between 1 and 10000
-NodeStrategy = s.builds(Node, s.text(ascii_lowercase, min_size=1), s.integers(min_value=1, max_value=10000))
+NodeStrategy = s.builds(Node, s.text(ascii_letters, min_size=1), s.integers(min_value=1, max_value=10000))
 
 # generate sets of nodes (to ensure that we have unique nodes)
 @given(s.sets(NodeStrategy, min_size=3))
