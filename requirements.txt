@@ -1,0 +1,60 @@
+attrs==19.3.0
+backcall==0.2.0
+bleach==3.1.5
+certifi==2020.6.20
+decorator==4.4.2
+defusedxml==0.6.0
+entrypoints==0.3
+greenlet==0.4.16
+hypothesis==5.20.2
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1593446408836/work
+ipykernel @ file:///tmp/build/80754af9/ipykernel_1594753368403/work/dist/ipykernel-5.3.2-py3-none-any.whl
+ipython @ file:///tmp/build/80754af9/ipython_1593447368578/work
+ipython-genutils==0.2.0
+ipywidgets==7.5.1
+jedi @ file:///tmp/build/80754af9/jedi_1592841891421/work
+Jinja2==2.11.2
+jsonschema @ file:///tmp/build/80754af9/jsonschema_1594363551272/work
+jupyter==1.0.0
+jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1594826976318/work
+jupyter-console==6.1.0
+jupyter-core==4.6.3
+MarkupSafe @ file:///tmp/build/80754af9/markupsafe_1594371495811/work
+mistune @ file:///tmp/build/80754af9/mistune_1594373098390/work
+more-itertools==8.4.0
+msgpack==1.0.0
+nb-conda==2.2.1
+nb-conda-kernels==2.2.3
+nbconvert @ file:///tmp/build/80754af9/nbconvert_1594376811065/work
+nbformat==5.0.7
+notebook==6.0.3
+packaging==20.4
+pandocfilters==1.4.2
+parso==0.7.0
+pexpect @ file:///tmp/build/80754af9/pexpect_1594383317248/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1594384075987/work
+pluggy==0.13.1
+prometheus-client==0.8.0
+prompt-toolkit==3.0.5
+ptyprocess==0.6.0
+py==1.9.0
+Pygments==2.6.1
+pynvim==0.4.1
+pyparsing==2.4.7
+pyrsistent==0.16.0
+pytest==5.4.3
+python-dateutil==2.8.1
+pyzmq==19.0.1
+qtconsole @ file:///tmp/build/80754af9/qtconsole_1592848611704/work
+QtPy==1.9.0
+Send2Trash==1.5.0
+six==1.15.0
+sortedcontainers==2.2.2
+terminado==0.8.3
+testpath==0.4.4
+tornado==6.0.4
+traitlets==4.3.3
+wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
+webencodings==0.5.1
+widgetsnbextension==3.5.1
+zipp==3.1.0
