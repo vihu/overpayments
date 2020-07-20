@@ -1,9 +1,10 @@
 overpayment
 =====
 
-An OTP library
+Just testing some overpayment maths.
 
-Build
------
+### Steps:
 
-    $ rebar3 compile
+1. python=3.7, use a virtual env (I use conda to do that)
+2. pip install pytest, hypothesis
+3. py.test -sv
