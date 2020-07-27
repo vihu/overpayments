@@ -56,6 +56,16 @@ def answer(input_list, target):
 
     return final_ans
 
+# [20, 30, 90, 110] -> [16, 24, 72, 88]
+def prop_answer(input_list, target):
+    ''' Reduce input_list values in same proportion to match new sum = target
+    '''
+    tot = sum([node.value for node in input_list])
+    delta = tot - target
+    return list(map(lambda node: Node(node.name,
+                                      math.floor(node.value - node.value*delta/tot)),
+                    input_list))
+
 def test_1():
     input_list = [Node("a", 20), Node("b", 110), Node("c", 110), Node("d", 110), Node("e", 30)]
     assert answer(input_list, 200) == [Node("a", 20), Node("b", 50), Node("c", 50), Node("d", 50), Node("e", 30)]
